@@ -33,20 +33,21 @@ import Github, { githubInfoLoader } from './components/Github/Github.jsx'
 // ])
 
 // Method 2
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path='/' element={<Layout />}>
-      <Route index element={<Home />} />
-      <Route path="about" element={<About />} />
-      <Route path="contact" element={<Contact />} />
-      <Route path="user/:id" element={<User />} />
-      <Route loader={githubInfoLoader} path="github" element={<Github />} />
-    </Route>
-  )
-)
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <Route path='/' element={<Layout />}>
+//       <Route index element={<Home />} />
+//       <Route path="about" element={<About />} />
+//       <Route path="contact" element={<Contact />} />
+//       <Route path="user/:id" element={<User />} />
+//       <Route loader={githubInfoLoader} path="github" element={<Github />} />
+//     </Route>
+//   )
+// )
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <App />
+    {/* <RouterProvider router={router} /> */}
   </StrictMode>,
 )
